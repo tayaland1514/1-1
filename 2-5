@@ -1,0 +1,7 @@
+list1 = list(map(str, input().split()))
+list2 = list(map(str, input().split()))
+mydict = {}
+for i in list1:
+    for j in list2:
+        mydict[i] = j
+print(mydict)
