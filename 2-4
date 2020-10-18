@@ -1,0 +1,4 @@
+mylist = list(map(int, input().split()))
+a = sum(mylist) / len(mylist)
+result = sum((i - a) ** 2 for i in mylist) / len(mylist)
+print(result)
