@@ -1,0 +1,4 @@
+mylist = list(map(int, input().split()))
+for elem in mylist:
+    if elem < 25 and elem % 4 == 0:
+        print(elem)
