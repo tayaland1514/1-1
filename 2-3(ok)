@@ -1,0 +1,12 @@
+mylist = list(map(int, input().split()))
+summa = 0
+kol = 0
+result = 0
+for elem in mylist:
+    summa += elem
+    kol += 1
+if kol != 0:
+    sr_arifm = summa / kol
+for i in mylist:
+    result += (i - sr_arifm) ** 2
+print(result / len(mylist))
