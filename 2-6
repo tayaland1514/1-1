@@ -1,0 +1,8 @@
+pythonist = 'pythonist'
+mydict = {}
+for i in pythonist:
+    if i == 't':
+        mydict[i] = 2
+    else:
+        mydict[i] = 1
+print(mydict)
