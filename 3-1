@@ -1,0 +1,6 @@
+mylist = list(map(int,input().split(',')))
+max_elem = mylist[0]
+for i in mylist:
+    if i > max_elem:
+        max_elem = i
+print(max_elem)
