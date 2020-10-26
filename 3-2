@@ -1,0 +1,14 @@
+mylist = list(map(int,input().split(',')))
+max_elem = mylist[0]
+for i in mylist:
+    if i > max_elem:
+        max_elem = i
+mylist2 = []
+for j in mylist:
+    if j != max_elem:
+        mylist2.append(j)
+max_elem2 = mylist2[0]
+for a in mylist2:
+    if a > max_elem2:
+        max_elem2 = a
+print(max_elem2)
