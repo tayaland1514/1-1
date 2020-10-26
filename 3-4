@@ -1,0 +1,16 @@
+mylist = list(map(int,input().split(',')))
+def _sort_(a): 
+    k = 0
+    first_len_of_mylist = len(mylist)
+    while k < first_len_of_mylist - 1: 
+        k1 = k     
+        i = k + 1 
+        while i < len(mylist):
+            if mylist[i] < mylist[k1]:
+                k1 = i
+            i += 1
+        mylist[k],mylist[k1] = mylist[k1],mylist[k]
+        k += 1 
+    return mylist
+print(_sort_(mylist))
+
