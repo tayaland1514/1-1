@@ -1,0 +1,8 @@
+def fibonacci(i):
+    number1 = 1
+    number2 = 1
+    for a in range(0, i - 2):
+        summa = number1 + number2
+        number1 = number2
+        number2 = summa
+    return number2
