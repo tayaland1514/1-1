@@ -1,0 +1,2 @@
+print(max(list(map(lambda x: x[0]**2 + x[1]**2, list(zip(list(map(int,input().split()))
+                                                  , list(map(int,input().split()))))))))
