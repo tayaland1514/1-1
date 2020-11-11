@@ -1,0 +1,18 @@
+n = int(input())
+def eratosfen(n):
+    list_of_min_elems = []
+    first_list = []
+    for i in range(2, n):
+        first_list.append(i)
+    for a in first_list:
+        min_elem = min(first_list)
+        for b in first_list:
+            if b % min_elem == 0:
+                first_list.remove(b)
+            if b == min_elem:
+                list_of_min_elems.append(min_elem)
+    result = first_list + list_of_min_elems
+    result.sort()
+    return result
+
+print(eratosfen(n))
