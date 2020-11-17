@@ -1,0 +1,13 @@
+a = float(input())
+b = str(a ** 2)
+a = str(a)
+f = open("test.txt", "w")
+f.write(a) # запись числа в файл
+f = open("test.txt", "r")
+f.read() # прочитывание числа из файла
+f = open("test.txt", "w")
+f.write(b)
+f = open("test.txt", "r")
+result = f.read()
+print(result)
+f.close()
