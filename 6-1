@@ -1,0 +1,4 @@
+def endless_generator(a):
+    while True:
+        yield a
+        a += 1
