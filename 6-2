@@ -1,0 +1,3 @@
+def generator(a, b, c):
+    result = [i ** 2 for i in range(a, b, c)]
+    return result
