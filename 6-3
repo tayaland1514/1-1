@@ -1,0 +1,25 @@
+#пример 1
+def reverse_numbers(n):
+    result = []
+    for i in range(n):
+        try:
+            i = 1 / i
+        except ZeroDivisionError:
+            print('error')
+        result.append(i)
+    return result
+    
+#пример 2
+n = '6'
+try:
+    result = n ** 2
+except TypeError:
+    print('error')
+    
+#пример 3
+n = 'hello'
+for i in n:
+    try:
+        i.append(1)
+    except:
+        print('error')
