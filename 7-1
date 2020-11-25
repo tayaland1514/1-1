@@ -1,0 +1,8 @@
+def quicksort(mylist):
+    n = 1
+    while n < len(mylist):
+        for i in range(len(mylist) - n):
+            if mylist[i] > mylist[i + 1]:
+                mylist[i], mylist[i + 1] = mylist[i + 1], mylist[i]
+        n += 1
+    return mylist
