@@ -1,0 +1,15 @@
+def binary_search(mylist, number):
+    k = 0
+    len_of_list = len(mylist)
+    result = 'no elem'
+    while k < len_of_list:
+        i = (k + len_of_list) // 2
+        if mylist[i] < number:
+            k = i + 1
+        else:
+            if mylist[i] > number:
+                len_of_list = i
+            else:
+                result = str(i)
+                k += 1
+    return result
