@@ -1,0 +1,12 @@
+def fast_power(power, base):
+    result = 1
+    while power > 0:
+        if power % 2 == 0:
+            power //= 2
+            base = base ** 2
+        else:
+            power -= 1
+            result *= base
+            power //= 2
+            base = base ** 2
+    return result
