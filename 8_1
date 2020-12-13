@@ -1,0 +1,62 @@
+class Complex:
+    def __init__(self, real=0, imaginary=0):
+        self.real = real
+        self.imaginary = imaginary
+        
+    def __str__(self):
+        return '{} + i*{}'.format(self.real, self.imaginary)
+    
+    def __add__(self, obj):
+        result = Complex()
+        
+        if type(obj) == type(self):
+                result.real = obj.real + self.real
+                result.imaginary = obj.imaginary + self.imaginary
+
+        else:
+                result.real = self.real + obj
+                result.imaginary = self.imaginary
+
+        return result
+    
+    def __sub__(self, obj):
+        result = Complex()
+        
+        if type(obj) == type(self):
+                result.real = self.real - obj.real
+                result.imaginary = self.imaginary - obj.imaginary
+
+        else:
+                result.real = obj - self.real
+                result.imaginary = self.imaginary
+
+        return result
+    
+    def __mul__(self, obj):
+        result = Complex()
+        
+        if type(obj) == type(self):
+                result.real = self.real * obj.real + self.imaginary * obj.imaginary
+                result.imaginary = self.imaginary * obj.real + obj.imaginary * self.real
+
+        else:
+                result.real = obj * self.real
+                result.imaginary = self.imaginary * obj
+
+        return result
+    
+    def __truediv__(self, obj):
+        result = Complex()
+        conjugate_num = Complex(obj.real, -obj.imaginary)
+        mul_conjugate = conjugate_num * obj
+        if type(obj) == type(self):
+                a = self * conjugate_num
+                result.real = a.real / mul_conjugate.real
+                result.imaginary = a.imaginary / mul_conjugate.real
+
+        else:
+                result.real = self.real / obj
+                result.imaginary = self.imaginary / obj
+
+        return result
+    
